@@ -1,0 +1,8 @@
+# GitHub Pages (Jekyll): página pública do Foco7 — política de privacidade e transferências.
+# Fonte dos textos: repositório privado Admilson-Landim/Foco7 (docs/index.md, docs/privacidade.md).
+title: Foco7
+description: Treino cerebral em 7 exercícios curtos. Sem anúncios, sem conta, os resultados ficam no telemóvel.
+lang: pt-PT
+theme: jekyll-theme-minimal
+exclude:
+  - README.md
