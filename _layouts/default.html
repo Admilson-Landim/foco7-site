@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-PT" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="theme-color" content="#10104F">
+  <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/icon-512.png' | relative_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:image" content="{{ '/assets/img/feature-graphic.png' | absolute_url }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>
+    // Tema e idioma antes de desenhar (sem "piscar"). Igual à app: escuro por omissão.
+    (function () {
+      var d = document.documentElement;
+      try { var t = localStorage.getItem('foco7.theme'); if (t === 'light' || t === 'dark') d.dataset.theme = t; } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="preload" href="{{ '/assets/fonts/ionicons-subset.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+</head>
+<body class="page-{{ page.page_type | default: 'doc' }}"{% if page.updated %} data-updated="{{ page.updated | date: '%Y-%m-%d' }}"{% endif %}>
+  <a class="skip" href="#main" data-i18n="a11y.skip">Saltar para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="Foco7">
+        <img class="logo logo-light" src="{{ '/assets/img/foco7-logo-horizontal.svg' | relative_url }}" alt="Foco7" width="110" height="45">
+        <img class="logo logo-dark" src="{{ '/assets/img/foco7-logo-horizontal-dark.svg' | relative_url }}" alt="Foco7" width="110" height="45">
+      </a>
+      <nav class="nav" aria-label="Menu">
+        <a href="{{ '/' | relative_url }}#exercicios" data-i18n="nav.exercises">Exercícios</a>
+        <a href="{{ '/' | relative_url }}#como-funciona" data-i18n="nav.how">Como funciona</a>
+        <a href="{{ '/privacidade/' | relative_url }}" data-i18n="nav.privacy">Privacidade</a>
+      </nav>
+      <div class="quick">
+        <div class="lang">
+          <button class="chip" id="lang-btn" aria-haspopup="listbox" aria-expanded="false">
+            <span class="flag" id="lang-flag">🇵🇹</span><span class="code" id="lang-code">PT</span>
+          </button>
+          <ul class="lang-menu" id="lang-menu" role="listbox" hidden></ul>
+        </div>
+        <button class="chip icon-only" id="theme-btn" aria-label="Tema">
+          <ion-icon name="sunny-outline" class="when-dark" aria-hidden="true"></ion-icon>
+          <ion-icon name="moon-outline" class="when-light" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <img class="symbol logo-light" src="{{ '/assets/img/foco7-symbol.svg' | relative_url }}" alt="" width="44" height="44">
+      <img class="symbol logo-dark" src="{{ '/assets/img/foco7-symbol-dark.svg' | relative_url }}" alt="" width="44" height="44">
+      <div>
+        <p class="footer-links">
+          <a href="{{ '/privacidade/' | relative_url }}" data-i18n="nav.privacy">Privacidade</a>
+          · <a href="mailto:ady.pina10@gmail.com">ady.pina10@gmail.com</a>
+          · <a href="https://github.com/Admilson-Landim" rel="noopener">GitHub</a>
+        </p>
+        <p class="muted small">© 2026 Admilson Landim · <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/app-texts.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/icons.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</body>
+</html>

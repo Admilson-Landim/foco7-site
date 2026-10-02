@@ -1,0 +1,131 @@
+---
+layout: default
+page_type: home
+title: Foco7 — Treino cerebral em 7 exercícios
+description: 7 exercícios curtos para treinar a atenção, o foco e a memória. Sem anúncios, sem conta, funciona sem internet. 5 idiomas.
+---
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-text">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Treino cerebral · Android</p>
+      <h1 data-i18n="hero.title">Treina a atenção em 7 exercícios curtos.</h1>
+      <p class="lead" data-i18n="hero.lead">Alguns minutos por dia para treinar o foco, a perceção e a memória de trabalho. Sem anúncios, sem conta, e os teus resultados ficam só no teu telemóvel.</p>
+      <ul class="badges">
+        <li><ion-icon name="ban-outline" aria-hidden="true"></ion-icon><span data-i18n="badge.ads">Sem anúncios</span></li>
+        <li><ion-icon name="person-remove-outline" aria-hidden="true"></ion-icon><span data-i18n="badge.account">Sem conta</span></li>
+        <li><ion-icon name="cloud-offline-outline" aria-hidden="true"></ion-icon><span data-i18n="badge.offline">Funciona sem internet</span></li>
+        <li><ion-icon name="language-outline" aria-hidden="true"></ion-icon><span data-i18n="badge.langs">5 idiomas</span></li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn-primary" href="#transferir"><ion-icon name="download-outline" aria-hidden="true"></ion-icon><span data-i18n="cta.get">Obter o Foco7</span></a>
+        <a class="btn btn-ghost" href="#exercicios" data-i18n="cta.see">Ver os exercícios</a>
+      </div>
+    </div>
+    <div class="hero-phone">
+      <div class="phone" aria-hidden="true"><div class="phone-screen" id="phone-home"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="exercicios">
+  <div class="wrap">
+    <h2 data-i18n="ex.title">Os 7 exercícios</h2>
+    <p class="section-lead" data-i18n="ex.lead">Cada exercício dura poucos minutos e tem 3 níveis: Fácil, Médio e Difícil. Os textos e as regras são os mesmos da app.</p>
+    <div class="ex-grid" id="ex-list"></div>
+  </div>
+</section>
+
+<section class="section alt" id="experimentar">
+  <div class="wrap">
+    <h2 data-i18n="demo.title">Experimenta aqui</h2>
+    <p class="section-lead" data-i18n="demo.lead">Três exercícios em versão mini, no navegador. Na app são maiores, com níveis, tempo e recordes.</p>
+    <div class="demo-grid">
+      <article class="card demo" style="--accent: var(--acc-blue)">
+        <header class="demo-head"><ion-icon name="grid-outline" aria-hidden="true"></ion-icon><h3 data-ex-name="schulte">Números em Ordem</h3></header>
+        <p class="muted" data-i18n="demo.schulte">Toca nos números de 1 a 9, por ordem, o mais depressa que conseguires.</p>
+        <div class="demo-status"><span id="schulte-next"></span><span class="mono" id="schulte-time">0,0 s</span></div>
+        <div class="schulte" id="schulte"></div>
+        <button class="btn btn-small" id="schulte-reset" data-i18n="demo.again">Outra vez</button>
+      </article>
+      <article class="card demo" style="--accent: var(--acc-red)">
+        <header class="demo-head"><ion-icon name="color-palette-outline" aria-hidden="true"></ion-icon><h3 data-ex-name="stroop">Cor ou Palavra</h3></header>
+        <p class="muted" data-i18n="demo.stroop">Toca na COR DA TINTA, não na palavra escrita.</p>
+        <div class="demo-status"><span id="stroop-score"></span><span id="stroop-mark" class="mark"></span></div>
+        <div class="stroop-word" id="stroop-word">AZUL</div>
+        <div class="stroop-buttons" id="stroop-buttons"></div>
+      </article>
+      <article class="card demo" style="--accent: var(--acc-cyan)">
+        <header class="demo-head"><ion-icon name="repeat-outline" aria-hidden="true"></ion-icon><h3 data-ex-name="mirror">Leitura ao Espelho</h3></header>
+        <p class="muted" data-i18n="demo.mirror">Lê a frase ao espelho e escolhe a certa.</p>
+        <div class="demo-status"><span id="mirror-score"></span><span id="mirror-mark" class="mark"></span></div>
+        <p class="mirror-text" id="mirror-text"></p>
+        <div class="mirror-options" id="mirror-options"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="como-funciona">
+  <div class="wrap">
+    <h2 data-i18n="how.title">Como funciona</h2>
+    <ol class="steps">
+      <li class="card"><span class="step-n">1</span><h3 data-i18n="how.s1t">Escolhe o nível</h3><p class="muted" data-i18n="how.s1">Fácil, Médio ou Difícil. A Intro de cada exercício explica as regras antes de começar.</p></li>
+      <li class="card"><span class="step-n">2</span><h3 data-i18n="how.s2t">Joga</h3><p class="muted" data-i18n="how.s2">Contagem 3-2-1 e começa. Se saíres da app ou parares 2 minutos, o jogo fica em pausa e o tempo não conta.</p></li>
+      <li class="card"><span class="step-n">3</span><h3 data-i18n="how.s3t">Vê o resultado</h3><p class="muted" data-i18n="how.s3">Pontuação, tempo, erros e a comparação com o teu melhor. "Novo recorde!" quando te superas.</p></li>
+    </ol>
+
+    <div class="split">
+      <article class="card feature-big">
+        <ion-icon name="flash-outline" class="big-icon" aria-hidden="true"></ion-icon>
+        <h3 data-i18n="training.title">Treino de hoje</h3>
+        <p class="muted" data-i18n="training.text">Os 7 exercícios seguidos, no teu nível. Se saíres a meio, retomas onde paraste. No fim vês o resumo, a comparação com o treino anterior e a tua sequência de dias.</p>
+      </article>
+      <article class="card feature-big">
+        <ion-icon name="stats-chart-outline" class="big-icon" aria-hidden="true"></ion-icon>
+        <h3 data-i18n="progress.title">Progresso</h3>
+        <p class="muted" data-i18n="progress.text">Calendário com os dias de treino, sequência atual e a maior, o melhor resultado por nível e um gráfico por exercício. Quando estiveres pronto, a app sugere o nível seguinte.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <h2 data-i18n="feat.title">Pensado para ti</h2>
+    <div class="feat-grid">
+      <div class="feat"><ion-icon name="lock-closed-outline" aria-hidden="true"></ion-icon><h3 data-i18n="feat.privacyT">Privado</h3><p class="muted" data-i18n="feat.privacy">Sem conta nem servidores: os resultados nunca saem do telemóvel.</p></div>
+      <div class="feat"><ion-icon name="airplane-outline" aria-hidden="true"></ion-icon><h3 data-i18n="feat.offlineT">Sem internet</h3><p class="muted" data-i18n="feat.offline">Tudo funciona em modo avião.</p></div>
+      <div class="feat"><ion-icon name="language-outline" aria-hidden="true"></ion-icon><h3 data-i18n="feat.langsT">5 idiomas</h3><p class="muted" data-i18n="feat.langs">Português (Portugal e Brasil), English, Français e Español, com frases e palavras próprias de cada idioma.</p></div>
+      <div class="feat"><ion-icon name="contrast-outline" aria-hidden="true"></ion-icon><h3 data-i18n="feat.themeT">Escuro ou claro</h3><p class="muted" data-i18n="feat.theme">Muda com um toque, como neste site.</p></div>
+      <div class="feat"><ion-icon name="accessibility-outline" aria-hidden="true"></ion-icon><h3 data-i18n="feat.a11yT">Fácil de ler</h3><p class="muted" data-i18n="feat.a11y">Letra grande, bom contraste e certo/errado com ✓ e ✗, não só pela cor.</p></div>
+      <div class="feat"><ion-icon name="volume-high-outline" aria-hidden="true"></ion-icon><h3 data-i18n="feat.voiceT">Voz</h3><p class="muted" data-i18n="feat.voice">Os Números ao Contrário podem ser ditos em voz alta, no teu idioma.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="transferir">
+  <div class="wrap">
+    <h2 data-i18n="dl.title">Obter o Foco7</h2>
+    <p class="section-lead" data-i18n="dl.lead">Gratuito, para Android 7 ou mais recente.</p>
+    <div class="dl-grid">
+      <div class="card dl">
+        <ion-icon name="logo-google-playstore" aria-hidden="true"></ion-icon>
+        <h3>Google Play</h3>
+        <p class="muted" data-i18n="dl.play">Em breve. A app está em fase de testes.</p>
+        <span class="btn btn-disabled" aria-disabled="true" data-i18n="dl.soon">Em breve</span>
+      </div>
+      <div class="card dl">
+        <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
+        <h3 data-i18n="dl.apkT">APK direto</h3>
+        <p class="muted" data-i18n="dl.apk">O ficheiro de instalação nas Releases do GitHub, assinado pelo autor.</p>
+        <a class="btn btn-primary" href="https://github.com/Admilson-Landim/foco7-site/releases" rel="noopener" data-i18n="dl.apkBtn">Ver versões</a>
+      </div>
+      <div class="card dl">
+        <ion-icon name="storefront-outline" aria-hidden="true"></ion-icon>
+        <h3 data-i18n="dl.otherT">Outras lojas</h3>
+        <p class="muted" data-i18n="dl.other">Huawei AppGallery, Samsung Galaxy Store, APKPure, Uptodown e Aptoide: em breve.</p>
+      </div>
+    </div>
+    <p class="muted small center" data-i18n="dl.iphone">Ainda não há versão para iPhone.</p>
+  </div>
+</section>

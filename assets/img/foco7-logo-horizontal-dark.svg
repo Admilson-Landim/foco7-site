@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="570 198 2677.4 1094">
+  <defs>
+    <mask id="s-ring" maskUnits="userSpaceOnUse" x="0" y="0" width="2000" height="2000">
+      <rect width="2000" height="2000" fill="#fff"/>
+      <rect x="0" y="856" width="2000" height="44" fill="#000"/>
+      <rect x="978" y="0" width="44" height="2000" fill="#000"/>
+      <path d="M 1000 878 L 1766.6 406.5 L 1900 -22 L 1000 -22 Z" fill="#000"/>
+    </mask>
+    <mask id="s-disc" maskUnits="userSpaceOnUse" x="0" y="0" width="2000" height="2000">
+      <rect width="2000" height="2000" fill="#fff"/>
+      <path d="M 1008.5 886.5 L 1389.6 553.4 L 1324.6 488.4 L 991.5 869.5 Z" fill="#000" stroke="#000" stroke-width="44" stroke-linejoin="round"/>
+    </mask>
+    <mask id="s-seven" maskUnits="userSpaceOnUse" x="0" y="0" width="2000" height="2000">
+      <rect width="2000" height="2000" fill="#fff"/>
+      <circle cx="1000" cy="878" r="171" fill="#000"/>
+    </mask>
+    <clipPath id="s-left"><rect x="0" y="0" width="1000" height="2000"/></clipPath>
+    <clipPath id="s-right"><rect x="1000" y="0" width="1000" height="2000"/></clipPath>
+  </defs>
+  <g mask="url(#s-ring)" fill="none" stroke-width="52">
+    <circle cx="1000" cy="878" r="336" stroke="#FFFFFF" clip-path="url(#s-left)"/>
+    <circle cx="1000" cy="878" r="336" stroke="#0A5CFF" clip-path="url(#s-right)"/>
+  </g>
+  <circle cx="1000" cy="878" r="122.5" fill="none" stroke="#FFFFFF" stroke-width="97" mask="url(#s-disc)"/>
+  <path d="M 634 248 H 1364 Q 1378 248 1378 262 V 318 Q 1378 362 1334 400 L 975 870 L 921 820 L 1081 454 H 634 Q 620 454 620 440 V 262 Q 620 248 634 248 Z" fill="#0A5CFF" mask="url(#s-seven)"/>
+  <path d="M 1008.5 886.5 L 1389.6 553.4 L 1324.6 488.4 L 991.5 869.5 Z" fill="#F2E000"/>
+  <circle cx="1000" cy="878" r="48" fill="#F2E000"/>
+  <path transform="translate(1442 1068) scale(0.54286)" d="M70 0H268V-240H577V-393H268V-547H619V-700H70Z" fill="#FFFFFF"/>
+  <path transform="translate(1800.3 1068) scale(0.54286)" d="M333 9C512 9 639 -108 639 -272C639 -435 512 -551 333 -551C156 -551 27 -435 27 -272C27 -108 156 9 333 9ZM333 -142C269 -142 219 -189 219 -272C219 -354 269 -400 333 -400C398 -400 447 -354 447 -272C447 -189 398 -142 333 -142Z" fill="#FFFFFF"/>
+  <path transform="translate(2171.6 1068) scale(0.54286)" d="M338 9C461 9 555 -46 592 -140L445 -215C419 -164 381 -142 337 -142C271 -142 219 -188 219 -272C219 -354 271 -400 337 -400C381 -400 419 -378 445 -327L592 -402C555 -496 461 -551 338 -551C156 -551 27 -435 27 -272C27 -107 156 9 338 9Z" fill="#FFFFFF"/>
+  <path transform="translate(2508.7 1068) scale(0.54286)" d="M333 9C512 9 639 -108 639 -272C639 -435 512 -551 333 -551C156 -551 27 -435 27 -272C27 -108 156 9 333 9ZM333 -142C269 -142 219 -189 219 -272C219 -354 269 -400 333 -400C398 -400 447 -354 447 -272C447 -189 398 -142 333 -142Z" fill="#FFFFFF"/>
+  <path transform="translate(2880 1068) scale(0.54286)" d="M140 0H356L603 -576V-700H23V-435H192V-543H377Z" fill="#0A5CFF"/>
+</svg>

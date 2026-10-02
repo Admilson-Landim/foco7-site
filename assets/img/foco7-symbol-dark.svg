@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="610 238 790 1014">
+  <defs>
+    <mask id="s-ring" maskUnits="userSpaceOnUse" x="0" y="0" width="2000" height="2000">
+      <rect width="2000" height="2000" fill="#fff"/>
+      <rect x="0" y="856" width="2000" height="44" fill="#000"/>
+      <rect x="978" y="0" width="44" height="2000" fill="#000"/>
+      <path d="M 1000 878 L 1766.6 406.5 L 1900 -22 L 1000 -22 Z" fill="#000"/>
+    </mask>
+    <mask id="s-disc" maskUnits="userSpaceOnUse" x="0" y="0" width="2000" height="2000">
+      <rect width="2000" height="2000" fill="#fff"/>
+      <path d="M 1008.5 886.5 L 1389.6 553.4 L 1324.6 488.4 L 991.5 869.5 Z" fill="#000" stroke="#000" stroke-width="44" stroke-linejoin="round"/>
+    </mask>
+    <mask id="s-seven" maskUnits="userSpaceOnUse" x="0" y="0" width="2000" height="2000">
+      <rect width="2000" height="2000" fill="#fff"/>
+      <circle cx="1000" cy="878" r="171" fill="#000"/>
+    </mask>
+    <clipPath id="s-left"><rect x="0" y="0" width="1000" height="2000"/></clipPath>
+    <clipPath id="s-right"><rect x="1000" y="0" width="1000" height="2000"/></clipPath>
+  </defs>
+  <g mask="url(#s-ring)" fill="none" stroke-width="52">
+    <circle cx="1000" cy="878" r="336" stroke="#FFFFFF" clip-path="url(#s-left)"/>
+    <circle cx="1000" cy="878" r="336" stroke="#0A5CFF" clip-path="url(#s-right)"/>
+  </g>
+  <circle cx="1000" cy="878" r="122.5" fill="none" stroke="#FFFFFF" stroke-width="97" mask="url(#s-disc)"/>
+  <path d="M 634 248 H 1364 Q 1378 248 1378 262 V 318 Q 1378 362 1334 400 L 975 870 L 921 820 L 1081 454 H 634 Q 620 454 620 440 V 262 Q 620 248 634 248 Z" fill="#0A5CFF" mask="url(#s-seven)"/>
+  <path d="M 1008.5 886.5 L 1389.6 553.4 L 1324.6 488.4 L 991.5 869.5 Z" fill="#F2E000"/>
+  <circle cx="1000" cy="878" r="48" fill="#F2E000"/>
+</svg>

@@ -1,6 +1,10 @@
 ---
 title: Foco7 — Política de privacidade / Privacy policy
 permalink: /privacidade/
+layout: doc
+page_type: privacy
+updated: 2026-10-02
+description: O Foco7 não recolhe dados pessoais. Os resultados ficam no telemóvel.
 ---
 
 # Foco7 — Política de privacidade
