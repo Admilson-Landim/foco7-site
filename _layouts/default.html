@@ -22,6 +22,7 @@
     })();
   </script>
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="preload" href="{{ '/assets/fonts/inter-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ '/assets/fonts/ionicons-subset.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 </head>
 <body class="page-{{ page.page_type | default: 'doc' }}"{% if page.updated %} data-updated="{{ page.updated | date: '%Y-%m-%d' }}"{% endif %}>
@@ -34,14 +35,16 @@
         <img class="logo logo-dark" src="{{ '/assets/img/foco7-logo-horizontal-dark.svg' | relative_url }}" alt="Foco7" width="110" height="45">
       </a>
       <nav class="nav" aria-label="Menu">
-        <a href="{{ '/' | relative_url }}#exercicios" data-i18n="nav.exercises">Exercícios</a>
-        <a href="{{ '/' | relative_url }}#como-funciona" data-i18n="nav.how">Como funciona</a>
-        <a href="{{ '/privacidade/' | relative_url }}" data-i18n="nav.privacy">Privacidade</a>
+        <a href="{{ '/' | relative_url }}#exercicios"><span class="n">01.</span> <span data-i18n="nav.exercises">Exercícios</span></a>
+        <a href="{{ '/' | relative_url }}#experimentar"><span class="n">02.</span> <span data-i18n="demo.title">Experimenta aqui</span></a>
+        <a href="{{ '/' | relative_url }}#como-funciona"><span class="n">03.</span> <span data-i18n="nav.how">Como funciona</span></a>
+        <a href="{{ '/' | relative_url }}#transferir"><span class="n">04.</span> <span data-i18n="dl.title">Obter o Foco7</span></a>
+        <a href="{{ '/privacidade/' | relative_url }}"><span class="n">//</span> <span data-i18n="nav.privacy">Privacidade</span></a>
       </nav>
       <div class="quick">
         <div class="lang">
           <button class="chip" id="lang-btn" aria-haspopup="listbox" aria-expanded="false">
-            <span class="flag" id="lang-flag">🇵🇹</span><span class="code" id="lang-code">PT</span>
+            <span class="code" id="lang-code">PT</span>
           </button>
           <ul class="lang-menu" id="lang-menu" role="listbox" hidden></ul>
         </div>

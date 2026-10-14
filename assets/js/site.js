@@ -1,4 +1,4 @@
-/* Foco7 — site público: idioma (5, como a app), tema escuro/claro, Início da app em miniatura,
+/* Foco7 — site público: idioma (5, como a app), tema escuro/claro, screenshots da app,
    lista dos exercícios (textos de app-texts.js, exportados da app) e 3 mini-jogos. */
 (function () {
   'use strict';
@@ -68,7 +68,6 @@
       'dl.apkT': 'APK direto', 'dl.apk': 'O ficheiro de instalação nas Releases do GitHub, assinado pelo autor.', 'dl.apkBtn': 'Ver versões',
       'dl.otherT': 'Outras lojas', 'dl.other': 'Huawei AppGallery, Samsung Galaxy Store, APKPure, Uptodown e Aptoide: em breve.',
       'dl.iphone': 'Ainda não há versão para iPhone.',
-      'phone.subtitle': '7 exercícios seguidos',
       mirror: [
         ['O gato dorme ao sol', 'O gato dorme ao sal', 'O gato corre ao sol', 'O sol dorme ao gato'],
         ['A chuva molha a rua', 'A chuva molha a lua', 'A rua molha a chuva', 'A chave molha a rua'],
@@ -120,7 +119,6 @@
       'dl.apkT': 'APK direto', 'dl.apk': 'O arquivo de instalação nas Releases do GitHub, assinado pelo autor.', 'dl.apkBtn': 'Ver versões',
       'dl.otherT': 'Outras lojas', 'dl.other': 'Huawei AppGallery, Samsung Galaxy Store, APKPure, Uptodown e Aptoide: em breve.',
       'dl.iphone': 'Ainda não há versão para iPhone.',
-      'phone.subtitle': '7 exercícios em sequência',
       mirror: [
         ['O gato dorme no sol', 'O gato dorme no sal', 'O gato corre no sol', 'O sol dorme no gato'],
         ['A chuva molha a rua', 'A chuva molha a lua', 'A rua molha a chuva', 'A chave molha a rua'],
@@ -172,7 +170,6 @@
       'dl.apkT': 'Direct APK', 'dl.apk': 'The install file on GitHub Releases, signed by the author.', 'dl.apkBtn': 'See releases',
       'dl.otherT': 'Other stores', 'dl.other': 'Huawei AppGallery, Samsung Galaxy Store, APKPure, Uptodown and Aptoide: coming soon.',
       'dl.iphone': 'There is no iPhone version yet.',
-      'phone.subtitle': '7 exercises in a row',
       mirror: [
         ['The cat sleeps in the sun', 'The cat sleeps in the sum', 'The bat sleeps in the sun', 'The sun sleeps in the cat'],
         ['Rain falls on the road', 'Rain falls on the toad', 'The road falls on rain', 'Rain calls on the road'],
@@ -224,7 +221,6 @@
       'dl.apkT': 'APK direct', 'dl.apk': 'Le fichier d’installation dans les Releases GitHub, signé par l’auteur.', 'dl.apkBtn': 'Voir les versions',
       'dl.otherT': 'Autres boutiques', 'dl.other': 'Huawei AppGallery, Samsung Galaxy Store, APKPure, Uptodown et Aptoide : bientôt.',
       'dl.iphone': 'Pas encore de version iPhone.',
-      'phone.subtitle': '7 exercices à la suite',
       mirror: [
         ['Le chat dort au soleil', 'Le chat dort au sommeil', 'Le chant dort au soleil', 'Le soleil dort au chat'],
         ['La pluie mouille la rue', 'La pluie mouille la roue', 'La rue mouille la pluie', 'La nuit mouille la rue'],
@@ -276,7 +272,6 @@
       'dl.apkT': 'APK directo', 'dl.apk': 'El archivo de instalación en las Releases de GitHub, firmado por el autor.', 'dl.apkBtn': 'Ver versiones',
       'dl.otherT': 'Otras tiendas', 'dl.other': 'Huawei AppGallery, Samsung Galaxy Store, APKPure, Uptodown y Aptoide: próximamente.',
       'dl.iphone': 'Todavía no hay versión para iPhone.',
-      'phone.subtitle': '7 ejercicios seguidos',
       mirror: [
         ['El gato duerme al sol', 'El gato duerme al sal', 'El pato duerme al sol', 'El sol duerme al gato'],
         ['La lluvia moja la calle', 'La lluvia moja la calma', 'La calle moja la lluvia', 'La lluvia baja la calle'],
@@ -365,14 +360,13 @@
     if (document.body.classList.contains('page-home')) document.title = tr('meta.title');
     if (document.body.classList.contains('page-privacy')) document.title = 'Foco7 — ' + tr('privacy.title');
     var cur = LANGS.filter(function (l) { return l.code === lang; })[0];
-    document.getElementById('lang-flag').textContent = cur.flag;
     document.getElementById('lang-code').textContent = cur.short;
     document.getElementById('lang-btn').setAttribute('aria-label', tr('lang.label') + ': ' + cur.name);
     document.querySelectorAll('.lang-menu button').forEach(function (b) {
       b.setAttribute('aria-selected', String(b.dataset.code === lang));
     });
     updateThemeLabel();
-    renderPhone();
+    renderShots();
     renderExercises();
     startStroop();
     startMirror();
@@ -423,40 +417,15 @@
     updateThemeLabel();
   });
 
-  /* ---------- Início da app em miniatura ---------- */
-  function renderPhone() {
-    var box = document.getElementById('phone-home');
-    if (!box) return;
-    var a = app();
-    var logoBase = document.querySelector('.brand .logo-light').getAttribute('src').replace(/foco7-logo-horizontal\.svg$/, '');
-    box.innerHTML = '';
-    var cur = LANGS.filter(function (l) { return l.code === lang; })[0];
-    box.appendChild(el('div', { class: 'm-top' }, [
-      el('span', {}, [
-        el('img', { class: 'logo-light', src: logoBase + 'foco7-logo-horizontal.svg', alt: '' }),
-        el('img', { class: 'logo-dark', src: logoBase + 'foco7-logo-horizontal-dark.svg', alt: '' }),
-      ]),
-      el('span', { class: 'm-quick' }, [el('span', { text: cur.flag }), el('span', { text: root.dataset.theme === 'dark' ? '☀' : '☾' })]),
-    ]));
-    box.appendChild(el('p', { class: 'm-hello', text: a.greeting || '' }));
-    box.appendChild(el('p', { class: 'm-sub', text: a.subtitle || '' }));
-    box.appendChild(el('div', { class: 'm-training' }, [
-      el('b', { text: a.trainingTitle || '' }),
-      el('span', { text: tr('phone.subtitle') + ' · ' + ((a.levels && a.levels.medium) || '') }),
-      el('div', { class: 'm-row' }, [el('span', { class: 'm-badge', text: a.statusTodo || '' }), el('span', { text: a.actionStart || '' })]),
-    ]));
-    box.appendChild(el('p', { class: 'm-title', text: a.exercisesTitle || '' }));
-    var grid = el('div', { class: 'm-grid' });
-    ORDER.forEach(function (id) {
-      var ex = a.exercises && a.exercises[id];
-      if (!ex) return;
-      grid.appendChild(el('div', { class: 'm-card', style: '--accent: var(--acc-' + META[id].accent + ')' }, [
-        el('ion-icon', { name: META[id].icon }), el('b', { text: ex.name }),
-      ]));
+  /* ---------- Screenshots reais da app (idioma e tema atuais) ---------- */
+  function renderShots() {
+    document.querySelectorAll('img[data-shot]').forEach(function (img) {
+      var src = img.getAttribute('src').replace(/shots\/[^/]+\/(dark|light)\/[^/]+$/,
+        'shots/' + lang + '/' + root.dataset.theme + '/' + img.dataset.shot + '.webp');
+      if (src !== img.getAttribute('src')) img.setAttribute('src', src);
     });
-    box.appendChild(grid);
   }
-  document.getElementById('theme-btn').addEventListener('click', function () { renderPhone(); paintIcons(); });
+  document.getElementById('theme-btn').addEventListener('click', renderShots);
 
   /* ---------- Lista dos exercícios ---------- */
   function renderExercises() {
@@ -464,19 +433,19 @@
     if (!list) return;
     var a = app();
     list.innerHTML = '';
-    ORDER.forEach(function (id) {
+    ORDER.forEach(function (id, i) {
       var ex = a.exercises && a.exercises[id];
       if (!ex) return;
       var steps = el('ol', {}, ex.instructions.map(function (s) { return el('li', { text: s }); }));
-      list.appendChild(el('article', { class: 'card ex', style: '--accent: var(--acc-' + META[id].accent + ')' }, [
-        el('div', { class: 'ex-head' }, [
-          el('span', { class: 'ex-icon' }, [el('ion-icon', { name: META[id].icon, 'aria-hidden': 'true' })]),
-          el('div', {}, [el('h3', { text: ex.name }), el('p', { class: 'sci', text: ex.scientificName })]),
+      list.appendChild(el('li', { class: 'ex', style: '--accent: var(--acc-' + META[id].accent + ')' }, [
+        el('span', { class: 'ex-n mono', text: '0' + (i + 1) }),
+        el('div', { class: 'ex-main' }, [
+          el('h3', {}, [el('ion-icon', { name: META[id].icon, 'aria-hidden': 'true' }), document.createTextNode(ex.name)]),
+          el('p', { class: 'sci mono', text: ex.scientificName }),
+          el('p', { class: 'muted', text: ex.description }),
+          el('details', {}, [el('summary', { text: tr('ex.how') }), steps]),
         ]),
-        el('span', { class: 'trains', text: ex.trains }),
-        el('p', { text: ex.description }),
-        el('details', {}, [el('summary', { text: tr('ex.how') }), steps]),
-        el('div', { class: 'levels' }, ['easy', 'medium', 'hard'].map(function (l) { return el('span', { text: a.levels[l] }); })),
+        el('span', { class: 'trains mono', text: ex.trains }),
       ]));
     });
   }
